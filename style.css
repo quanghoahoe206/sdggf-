@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 1. Header & Navigation */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a202c;
+    padding: 15px 30px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3182ce;
+    letter-spacing: 1px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav ul li a:hover {
+    color: #63b3ed;
+}
+
+/* 2. Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #ebf8ff 0%, #edf2f7 100%);
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #1a365d;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #4a5568;
+    margin-bottom: 25px;
+}
+
+.hero .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #3182ce;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.hero .btn:hover {
+    background-color: #2b6cb0;
+    transform: translateY(-2px);
+}
+
+/* 3. Services Section (Flexbox) */
+.services {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.services h2 {
+    font-size: 28px;
+    color: #1a365d;
+    margin-bottom: 30px;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.service {
+    flex: 1;
+    min-width: 260px;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    color: #2b6cb0;
+    margin-bottom: 12px;
+}
+
+.service p {
+    font-size: 14px;
+    color: #4a5568;
+}
+
+/* 4. Testimonials Section */
+.testimonials {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #edf2f7;
+}
+
+.testimonials h2 {
+    font-size: 28px;
+    color: #1a365d;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    flex: 1;
+    min-width: 280px;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    border-left: 4px solid #3182ce;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-style: italic;
+    color: #4a5568;
+}
+
+/* 5. Footer */
+.footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #1a202c;
+    color: #a0aec0;
+    font-size: 14px;
+}
+
+/* 6. Responsive Media Queries (Mobile & Tablet) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .service-container {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .testimonial-container {
+        flex-direction: column;
+    }
+
+    .services,
+    .testimonials {
+        padding: 40px 15px;
+    }
+}
